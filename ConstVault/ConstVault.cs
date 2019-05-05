@@ -10,11 +10,13 @@ using System.Windows.Forms;
 
 namespace ConstVault
 {
-    public partial class Form1 : Form
+    public partial class ConstVault : Form
     {
-        public Form1()
+        public ConstVault()
         {
             InitializeComponent();
+            ConstElement e1 = new ConstElement("Some HEX color", "#01f2dd", ConstElement.Type.Auto);
+            ConstElement e2 = new ConstElement("Second element", "https://github.com/Skinner11/ConstVault", ConstElement.Type.URL);
         }
     }
 }
