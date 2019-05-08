@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConstCreator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConstCreator.Designer.cs">
+      <DependentUpon>ConstCreator.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConstElement.cs" />
     <Compile Include="ConstVault.cs">
       <SubType>Form</SubType>
@@ -56,6 +62,9 @@
     <Compile Include="Patterns.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ConstCreator.resx">
+      <DependentUpon>ConstCreator.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ConstVault.resx">
       <DependentUpon>ConstVault.cs</DependentUpon>
     </EmbeddedResource>

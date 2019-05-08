@@ -16,7 +16,7 @@ namespace ConstVault
         {
             InitializeComponent();
             ConstElement e1 = new ConstElement("Some HEX color", "#01f2dd", ConstElement.Type.Auto);
-            ConstElement e2 = new ConstElement("Second element", "https://github.com/Skinner11/ConstVault", ConstElement.Type.URL);
+            ConstElement e2 = new ConstElement("RGBA, hopefully", "RGBA(102,102,102,0.2)", ConstElement.Type.Auto);
         }
     }
 }

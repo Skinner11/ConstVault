@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace ConstVault
@@ -25,5 +26,10 @@ namespace ConstVault
         /// </summary>
         /// <example>#0f0, 808020, #ffa500</example>
         public const string HEX = @"^\#?[0-f]{3}$|^\#?[0-f]{6}$";
+
+        public static bool CheckMatch(string value, string exp)
+        {
+            return Regex.IsMatch(value, exp, RegexOptions.IgnoreCase);
+        }
     }
 }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace ConstVault    
 {
     ///<summary>Definition of a single ConstElement's data structure</summary>
-    class ConstElement
+    public class ConstElement
     {
         public enum Type
         {
@@ -49,11 +49,11 @@ namespace ConstVault
         ///<param name="value">The value which we'll try to parse into one of the Types</param>
         private Type AutoType(string value)
         {
-            if (Regex.IsMatch(value, Patterns.RGB))
+            if (Patterns.CheckMatch(value, Patterns.RGB))
                 return Type.RGB;
-            if (Regex.IsMatch(value, Patterns.RGBA))
+            if (Patterns.CheckMatch(value, Patterns.RGBA))
                 return Type.RGBA;
-            if (Regex.IsMatch(value, Patterns.HEX))
+            if (Patterns.CheckMatch(value, Patterns.HEX))
                 return Type.HEX;
             if (Uri.IsWellFormedUriString(value, 0))
                 return Type.URL;
